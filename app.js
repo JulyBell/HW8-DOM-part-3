@@ -39,8 +39,7 @@ function showDate(){
 	longDate = `<p>Current date: ${hours} : ${minutes} : ${seconds}</p>`;
 	shortDate = `<p>Current date: ${hours} : ${minutes}</p>`;
 
-	timePattern === true ? dateArea.innerHTML = longDate : dateArea.innerHTML = shortDate;
-	
+	dateArea.innerHTML = timePattern === true ? longDate : shortDate;
 }
 
 timePattern = true;
@@ -52,7 +51,6 @@ document.querySelector('#main').addEventListener('click', (e) => {
 
 	if(e.target.tagName === 'P'){
 		console.log('clicked');
-		clearInterval(time);
 		timePattern = !timePattern;
 		setInterval(showDate, 1000);
 
