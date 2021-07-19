@@ -23,8 +23,6 @@ showRange(5, 1);
 
 // task 2:
 let dateArea = document.querySelector('#main');
-let longDate;
-let shortDate;
 let timePattern;
 
 function showDate(){	
